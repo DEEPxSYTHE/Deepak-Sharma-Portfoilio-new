@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepak Sharma | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    html{
+        scroll-behavior: smooth;
+    }
+    :root {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --accent-color: #00bfff;
+      --card-bg: #1e1e1e;
+    }
+    body.light {
+      --bg-color: #ffffff;
+      --text-color: #222222;
+      --card-bg: #f0f0f0;
+    }
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.4s, color 0.4s;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-color);
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 1000;
+    }
+    header h2 {color: var(--accent-color);}
+    nav ul {display: flex; list-style: none; gap: 30px;}
+    nav ul li a {text-decoration: none; color: var(--text-color); transition: 0.3s;}
+    nav ul li a:hover {color: var(--accent-color);}
+    .toggle-btn {
+      cursor: pointer; padding: 8px 14px; border-radius: 5px;
+      border: 2px solid var(--accent-color); color: var(--accent-color); background: transparent;
+      font-weight: bold; transition: 0.3s;
+    }
+    .toggle-btn:hover {background: var(--accent-color); color: #fff;}
+
+    .hero {
+      display: flex; align-items: center; justify-content: space-between;
+      min-height: 100vh; padding: 0 60px;
+    }
+    .hero-text {max-width: 50%;}
+    .hero-text h1 {font-size: 2.5rem;}
+    .hero-text h2 {color: var(--accent-color); font-size: 2rem;}
+    .hero-text p {margin: 15px 0; font-size: 1.1rem; line-height: 1.6;}
+    .btns {margin-top: 20px;}
+    .btns button {
+      margin-right: 15px; padding: 10px 20px; border: 2px solid var(--accent-color);
+      background: transparent; color: var(--accent-color); border-radius: 5px;
+      font-weight: bold; cursor: pointer; transition: 0.3s;
+    }
+    .btns button:hover {background: var(--accent-color); color: #fff;}
+
+    .hero-img {
+      width: 280px; height: 280px; border-radius: 50%; overflow: hidden;
+      box-shadow: 0 0 20px var(--accent-color), 0 0 40px var(--accent-color);
+      animation: glow 3s infinite alternate;
+    }
+    .hero-img img {width: 100%; height: 100%; object-fit: cover;}
+    @keyframes glow {
+      from {box-shadow: 0 0 15px var(--accent-color);}
+      to {box-shadow: 0 0 40px var(--accent-color), 0 0 70px var(--accent-color);}
+    }
+
+    section {padding: 80px 60px; max-width: 1100px; margin: auto;}
+    h2 {color: var(--accent-color); margin-bottom: 20px;}
+    .card {
+      background: var(--card-bg); padding: 20px; border-radius: 10px;
+      margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Contact */
+    .contact-form {
+      display: flex; flex-direction: column; gap: 15px; max-width: 500px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 12px; border: 2px solid var(--accent-color);
+      border-radius: 5px; outline: none; background: transparent;
+      color: var(--text-color); resize: none;
+    }
+    .contact-form button {
+      padding: 12px; background: var(--accent-color); color: #fff;
+      border: none; border-radius: 5px; font-size: 1rem; cursor: pointer;
+    }
+    .contact-form button:hover {opacity: 0.9;}
+
+    footer {background: #111; padding: 20px; text-align: center; color: #aaa;}
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Deepak Sharma</h2>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    
+      </ul>
+    </nav>
+    <button class="toggle-btn" id="toggle">Light Mode</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Hi! I am Deepak Sharma</h1>
+      <h2>Front-End Developer</h2>
+      <p>
+        Aspiring Front-End Developer passionate about creating modern, responsive web designs.
+        Currently pursuing BCA and exploring opportunities in web development.
+      </p>
+      <div class="btns">
+  <a href="mailto:deepanshusharma1156@gmail.com">
+    <button>Hire Me</button>
+  </a>
+  <a href="#projects">
+    <button>View Projects</button>
+  </a>
+</div>
+
+    </div>
+    <div class="hero-img">
+      <img src="Img/My Profile Photo.jpg" alt="Deepak Sharma">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a BCA student at Indira Gandhi University with a strong passion for front-end web development.</p>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <b>BCA</b> – Indira Gandhi University, Meerpur Rewari, Haryana (2023 – Present)
+    </div>
+    <div class="card">
+      <b>12th Standard (HBSE)</b> – V.P Sr. Sec. School, Ratthanthal Rewari (2022)
+    </div>
+  </section>
+
+
+   <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <b>Web Developer Intern</b> – Adore India <br>
+      <i>Sep 2025 – Present</i>
+      <p>Working on front-end development tasks, contributing articles to projects, and collaborating on real-world applications to enhance skills in HTML, CSS, and JavaScript.</p>
+    </div>
+  </section>
+
+
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card"><b>Amazon Webpage Clone</b> – Layout, navigation, responsive design.</div>
+    <div class="card"><b>Google Homepage Clone</b> – Interactive UI with JavaScript.</div>
+    <div class="card"><b>Calculator App</b> – Responsive calculator with HTML, CSS, JS.</div>
+    <div class="card"><b>To-Do List App</b> – Add, delete, complete tasks with JS.</div>
+    <div class="card"><b>Electricity Bill Calculator</b> – JS logic with dynamic calculation.</div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="card">Languages: HTML, CSS, JavaScript</div>
+    <div class="card">Tools: Git, VS Code, Chrome DevTools</div>
+    <div class="card">Other: MS Excel, CCNA Basics</div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form" id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="status"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Deepak Sharma | <a href="mailto:deepanshusharma1156@gmail.com" target="_blank">Email</a> | 
+    <a href="https://www.linkedin.com/in/deepak-sharma-074ab8289" target="_blank">LinkedIn </a> | 
+    <a href="https://github.com/DEEPxSYTHE" target="_blank">GitHub</a></p>
+  </footer>
+
+
+  <script>
+    // Dark/Light Toggle
+    const toggleBtn = document.getElementById("toggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light");
+      toggleBtn.textContent = document.body.classList.contains("light") ? "Dark Mode" : "Light Mode";
+    });
+
+    // Contact form (frontend)
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("status").innerText = "✅ Your message has been recorded!";
+      // Here we will connect backend to save in Excel
+    });
+  </script>
+</body>
+</html>
